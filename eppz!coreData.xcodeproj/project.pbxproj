@@ -17,8 +17,21 @@
 		AEC80B9B17886FC0000C04D8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC80B9A17886FC0000C04D8 /* Default@2x.png */; };
 		AEC80B9D17886FC0000C04D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC80B9C17886FC0000C04D8 /* Default-568h@2x.png */; };
 		AEC80BA017886FC0000C04D8 /* EPPZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80B9F17886FC0000C04D8 /* EPPZViewController.m */; };
-		AEC80BA317886FC0000C04D8 /* EPPZViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC80BA117886FC0000C04D8 /* EPPZViewController_iPhone.xib */; };
-		AEC80BA617886FC0000C04D8 /* EPPZViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC80BA417886FC0000C04D8 /* EPPZViewController_iPad.xib */; };
+		AEC80BA317886FC0000C04D8 /* EPPZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC80BA117886FC0000C04D8 /* EPPZViewController.xib */; };
+		AEC80BAE17886FD6000C04D8 /* EPPZCoreDataObjectQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80BAD17886FD6000C04D8 /* EPPZCoreDataObjectQueue.m */; };
+		AEC80BB0178870AC000C04D8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC80BAF178870AC000C04D8 /* CoreData.framework */; };
+		AEC80C1717887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEC80C1517887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodeld */; };
+		AEC80C1B17887BD8000C04D8 /* EPPZTimeStampQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80C1A17887BD8000C04D8 /* EPPZTimeStampQueue.m */; };
+		AEC80C25178888CF000C04D8 /* EPPZQueuedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80C24178888CF000C04D8 /* EPPZQueuedObject.m */; };
+		AEC80C2F17889669000C04D8 /* EPPZTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80C2E17889669000C04D8 /* EPPZTimeStamp.m */; };
+		AEC80C3417889C90000C04D8 /* EPPZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80C3317889C90000C04D8 /* EPPZTableViewCell.m */; };
+		AEC80C3817889C9E000C04D8 /* EPPZTimeStampCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80C3717889C9E000C04D8 /* EPPZTimeStampCell.m */; };
+		AEC80C3A17889E84000C04D8 /* EPPZTimeStampCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC80C3917889E84000C04D8 /* EPPZTimeStampCell.xib */; };
+		AEC80C3F1788A2C9000C04D8 /* EPPZFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80C3E1788A2C9000C04D8 /* EPPZFlatButton.m */; };
+		AEC80C441788A7DF000C04D8 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC80C401788A7DF000C04D8 /* icon-72.png */; };
+		AEC80C451788A7DF000C04D8 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC80C411788A7DF000C04D8 /* icon-72@2x.png */; };
+		AEC80C461788A7DF000C04D8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC80C421788A7DF000C04D8 /* icon.png */; };
+		AEC80C471788A7DF000C04D8 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC80C431788A7DF000C04D8 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +50,28 @@
 		AEC80B9C17886FC0000C04D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AEC80B9E17886FC0000C04D8 /* EPPZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPPZViewController.h; sourceTree = "<group>"; };
 		AEC80B9F17886FC0000C04D8 /* EPPZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPPZViewController.m; sourceTree = "<group>"; };
-		AEC80BA217886FC0000C04D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EPPZViewController_iPhone.xib; sourceTree = "<group>"; };
-		AEC80BA517886FC0000C04D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EPPZViewController_iPad.xib; sourceTree = "<group>"; };
+		AEC80BA217886FC0000C04D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EPPZViewController.xib; sourceTree = "<group>"; };
+		AEC80BAC17886FD6000C04D8 /* EPPZCoreDataObjectQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZCoreDataObjectQueue.h; sourceTree = "<group>"; };
+		AEC80BAD17886FD6000C04D8 /* EPPZCoreDataObjectQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZCoreDataObjectQueue.m; sourceTree = "<group>"; };
+		AEC80BAF178870AC000C04D8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AEC80C1617887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EPPZCoreDataObjectQueue.xcdatamodel; sourceTree = "<group>"; };
+		AEC80C1917887BD8000C04D8 /* EPPZTimeStampQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZTimeStampQueue.h; sourceTree = "<group>"; };
+		AEC80C1A17887BD8000C04D8 /* EPPZTimeStampQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZTimeStampQueue.m; sourceTree = "<group>"; };
+		AEC80C23178888CF000C04D8 /* EPPZQueuedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZQueuedObject.h; sourceTree = "<group>"; };
+		AEC80C24178888CF000C04D8 /* EPPZQueuedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZQueuedObject.m; sourceTree = "<group>"; };
+		AEC80C2D17889669000C04D8 /* EPPZTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZTimeStamp.h; sourceTree = "<group>"; };
+		AEC80C2E17889669000C04D8 /* EPPZTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZTimeStamp.m; sourceTree = "<group>"; };
+		AEC80C3217889C90000C04D8 /* EPPZTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZTableViewCell.h; sourceTree = "<group>"; };
+		AEC80C3317889C90000C04D8 /* EPPZTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZTableViewCell.m; sourceTree = "<group>"; };
+		AEC80C3617889C9E000C04D8 /* EPPZTimeStampCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZTimeStampCell.h; sourceTree = "<group>"; };
+		AEC80C3717889C9E000C04D8 /* EPPZTimeStampCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZTimeStampCell.m; sourceTree = "<group>"; };
+		AEC80C3917889E84000C04D8 /* EPPZTimeStampCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EPPZTimeStampCell.xib; sourceTree = "<group>"; };
+		AEC80C3D1788A2C9000C04D8 /* EPPZFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZFlatButton.h; sourceTree = "<group>"; };
+		AEC80C3E1788A2C9000C04D8 /* EPPZFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZFlatButton.m; sourceTree = "<group>"; };
+		AEC80C401788A7DF000C04D8 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
+		AEC80C411788A7DF000C04D8 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
+		AEC80C421788A7DF000C04D8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		AEC80C431788A7DF000C04D8 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC80BB0178870AC000C04D8 /* CoreData.framework in Frameworks */,
 				AEC80B8717886FC0000C04D8 /* UIKit.framework in Frameworks */,
 				AEC80B8917886FC0000C04D8 /* Foundation.framework in Frameworks */,
 				AEC80B8B17886FC0000C04D8 /* CoreGraphics.framework in Frameworks */,
@@ -85,12 +119,11 @@
 		AEC80B8C17886FC0000C04D8 /* eppz!coreData */ = {
 			isa = PBXGroup;
 			children = (
+				AEC80C14178878C9000C04D8 /* Core data store */,
+				AEC80C1817887BBD000C04D8 /* TimeStampQueue */,
 				AEC80B9517886FC0000C04D8 /* EPPZAppDelegate.h */,
 				AEC80B9617886FC0000C04D8 /* EPPZAppDelegate.m */,
-				AEC80B9E17886FC0000C04D8 /* EPPZViewController.h */,
-				AEC80B9F17886FC0000C04D8 /* EPPZViewController.m */,
-				AEC80BA117886FC0000C04D8 /* EPPZViewController_iPhone.xib */,
-				AEC80BA417886FC0000C04D8 /* EPPZViewController_iPad.xib */,
+				AEC80C3B1788A15B000C04D8 /* Views */,
 				AEC80B8D17886FC0000C04D8 /* Supporting Files */,
 			);
 			path = "eppz!coreData";
@@ -99,6 +132,10 @@
 		AEC80B8D17886FC0000C04D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AEC80C401788A7DF000C04D8 /* icon-72.png */,
+				AEC80C411788A7DF000C04D8 /* icon-72@2x.png */,
+				AEC80C421788A7DF000C04D8 /* icon.png */,
+				AEC80C431788A7DF000C04D8 /* icon@2x.png */,
 				AEC80B8E17886FC0000C04D8 /* eppz!coreData-Info.plist */,
 				AEC80B8F17886FC0000C04D8 /* InfoPlist.strings */,
 				AEC80B9217886FC0000C04D8 /* main.m */,
@@ -108,6 +145,87 @@
 				AEC80B9C17886FC0000C04D8 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEC80C14178878C9000C04D8 /* Core data store */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80BAF178870AC000C04D8 /* CoreData.framework */,
+				AEC80BAC17886FD6000C04D8 /* EPPZCoreDataObjectQueue.h */,
+				AEC80BAD17886FD6000C04D8 /* EPPZCoreDataObjectQueue.m */,
+				AEC80C1517887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodeld */,
+				AEC80C26178888D3000C04D8 /* QueuedObject */,
+			);
+			name = "Core data store";
+			sourceTree = "<group>";
+		};
+		AEC80C1817887BBD000C04D8 /* TimeStampQueue */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80C1917887BD8000C04D8 /* EPPZTimeStampQueue.h */,
+				AEC80C1A17887BD8000C04D8 /* EPPZTimeStampQueue.m */,
+				AEC80C3017889BA7000C04D8 /* TimeStamp */,
+			);
+			name = TimeStampQueue;
+			sourceTree = "<group>";
+		};
+		AEC80C26178888D3000C04D8 /* QueuedObject */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80C23178888CF000C04D8 /* EPPZQueuedObject.h */,
+				AEC80C24178888CF000C04D8 /* EPPZQueuedObject.m */,
+			);
+			name = QueuedObject;
+			sourceTree = "<group>";
+		};
+		AEC80C3017889BA7000C04D8 /* TimeStamp */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80C2D17889669000C04D8 /* EPPZTimeStamp.h */,
+				AEC80C2E17889669000C04D8 /* EPPZTimeStamp.m */,
+			);
+			name = TimeStamp;
+			sourceTree = "<group>";
+		};
+		AEC80C3117889C77000C04D8 /* TimeStamp cell */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80C3517889C94000C04D8 /* eppz!cell */,
+				AEC80C3617889C9E000C04D8 /* EPPZTimeStampCell.h */,
+				AEC80C3717889C9E000C04D8 /* EPPZTimeStampCell.m */,
+				AEC80C3917889E84000C04D8 /* EPPZTimeStampCell.xib */,
+			);
+			name = "TimeStamp cell";
+			sourceTree = "<group>";
+		};
+		AEC80C3517889C94000C04D8 /* eppz!cell */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80C3217889C90000C04D8 /* EPPZTableViewCell.h */,
+				AEC80C3317889C90000C04D8 /* EPPZTableViewCell.m */,
+			);
+			name = "eppz!cell";
+			sourceTree = "<group>";
+		};
+		AEC80C3B1788A15B000C04D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80C3C1788A2BA000C04D8 /* Flat button */,
+				AEC80C3117889C77000C04D8 /* TimeStamp cell */,
+				AEC80B9E17886FC0000C04D8 /* EPPZViewController.h */,
+				AEC80B9F17886FC0000C04D8 /* EPPZViewController.m */,
+				AEC80BA117886FC0000C04D8 /* EPPZViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AEC80C3C1788A2BA000C04D8 /* Flat button */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80C3D1788A2C9000C04D8 /* EPPZFlatButton.h */,
+				AEC80C3E1788A2C9000C04D8 /* EPPZFlatButton.m */,
+			);
+			name = "Flat button";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +284,12 @@
 				AEC80B9917886FC0000C04D8 /* Default.png in Resources */,
 				AEC80B9B17886FC0000C04D8 /* Default@2x.png in Resources */,
 				AEC80B9D17886FC0000C04D8 /* Default-568h@2x.png in Resources */,
-				AEC80BA317886FC0000C04D8 /* EPPZViewController_iPhone.xib in Resources */,
-				AEC80BA617886FC0000C04D8 /* EPPZViewController_iPad.xib in Resources */,
+				AEC80BA317886FC0000C04D8 /* EPPZViewController.xib in Resources */,
+				AEC80C3A17889E84000C04D8 /* EPPZTimeStampCell.xib in Resources */,
+				AEC80C441788A7DF000C04D8 /* icon-72.png in Resources */,
+				AEC80C451788A7DF000C04D8 /* icon-72@2x.png in Resources */,
+				AEC80C461788A7DF000C04D8 /* icon.png in Resources */,
+				AEC80C471788A7DF000C04D8 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +303,14 @@
 				AEC80B9317886FC0000C04D8 /* main.m in Sources */,
 				AEC80B9717886FC0000C04D8 /* EPPZAppDelegate.m in Sources */,
 				AEC80BA017886FC0000C04D8 /* EPPZViewController.m in Sources */,
+				AEC80BAE17886FD6000C04D8 /* EPPZCoreDataObjectQueue.m in Sources */,
+				AEC80C1717887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodeld in Sources */,
+				AEC80C1B17887BD8000C04D8 /* EPPZTimeStampQueue.m in Sources */,
+				AEC80C25178888CF000C04D8 /* EPPZQueuedObject.m in Sources */,
+				AEC80C2F17889669000C04D8 /* EPPZTimeStamp.m in Sources */,
+				AEC80C3417889C90000C04D8 /* EPPZTableViewCell.m in Sources */,
+				AEC80C3817889C9E000C04D8 /* EPPZTimeStampCell.m in Sources */,
+				AEC80C3F1788A2C9000C04D8 /* EPPZFlatButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,20 +325,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		AEC80BA117886FC0000C04D8 /* EPPZViewController_iPhone.xib */ = {
+		AEC80BA117886FC0000C04D8 /* EPPZViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AEC80BA217886FC0000C04D8 /* en */,
 			);
-			name = EPPZViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		AEC80BA417886FC0000C04D8 /* EPPZViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AEC80BA517886FC0000C04D8 /* en */,
-			);
-			name = EPPZViewController_iPad.xib;
+			name = EPPZViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -315,6 +437,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AEC80C1517887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AEC80C1617887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodel */,
+			);
+			currentVersion = AEC80C1617887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodel */;
+			path = EPPZCoreDataObjectQueue.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AEC80B7B17886FC0000C04D8 /* Project object */;
 }

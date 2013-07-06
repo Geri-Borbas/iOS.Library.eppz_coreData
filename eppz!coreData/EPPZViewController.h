@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EPPZTimeStampQueue.h"
+#import "EPPZTimeStampCell.h"
+
 
 @interface EPPZViewController : UIViewController
+
+    <UITableViewDelegate,
+     UITableViewDataSource,
+     EPPZTableViewCellModelSource>
+
+@property (nonatomic, weak) IBOutlet UITableView *queueTableView;
+
+-(IBAction)push;
+-(IBAction)pop;
+-(IBAction)save;
+
 
 @end
