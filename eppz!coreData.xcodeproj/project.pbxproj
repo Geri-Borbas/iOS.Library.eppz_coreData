@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEC80B8717886FC0000C04D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC80B8617886FC0000C04D8 /* UIKit.framework */; };
+		AEC80B8917886FC0000C04D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC80B8817886FC0000C04D8 /* Foundation.framework */; };
+		AEC80B8B17886FC0000C04D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC80B8A17886FC0000C04D8 /* CoreGraphics.framework */; };
+		AEC80B9117886FC0000C04D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEC80B8F17886FC0000C04D8 /* InfoPlist.strings */; };
+		AEC80B9317886FC0000C04D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80B9217886FC0000C04D8 /* main.m */; };
+		AEC80B9717886FC0000C04D8 /* EPPZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80B9617886FC0000C04D8 /* EPPZAppDelegate.m */; };
+		AEC80B9917886FC0000C04D8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC80B9817886FC0000C04D8 /* Default.png */; };
+		AEC80B9B17886FC0000C04D8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC80B9A17886FC0000C04D8 /* Default@2x.png */; };
+		AEC80B9D17886FC0000C04D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC80B9C17886FC0000C04D8 /* Default-568h@2x.png */; };
+		AEC80BA017886FC0000C04D8 /* EPPZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80B9F17886FC0000C04D8 /* EPPZViewController.m */; };
+		AEC80BA317886FC0000C04D8 /* EPPZViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC80BA117886FC0000C04D8 /* EPPZViewController_iPhone.xib */; };
+		AEC80BA617886FC0000C04D8 /* EPPZViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC80BA417886FC0000C04D8 /* EPPZViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AEC80B8317886FC0000C04D8 /* eppz!coreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eppz!coreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC80B8617886FC0000C04D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AEC80B8817886FC0000C04D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AEC80B8A17886FC0000C04D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AEC80B8E17886FC0000C04D8 /* eppz!coreData-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "eppz!coreData-Info.plist"; sourceTree = "<group>"; };
+		AEC80B9017886FC0000C04D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AEC80B9217886FC0000C04D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AEC80B9417886FC0000C04D8 /* eppz!coreData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eppz!coreData-Prefix.pch"; sourceTree = "<group>"; };
+		AEC80B9517886FC0000C04D8 /* EPPZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPPZAppDelegate.h; sourceTree = "<group>"; };
+		AEC80B9617886FC0000C04D8 /* EPPZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPPZAppDelegate.m; sourceTree = "<group>"; };
+		AEC80B9817886FC0000C04D8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AEC80B9A17886FC0000C04D8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AEC80B9C17886FC0000C04D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AEC80B9E17886FC0000C04D8 /* EPPZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPPZViewController.h; sourceTree = "<group>"; };
+		AEC80B9F17886FC0000C04D8 /* EPPZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPPZViewController.m; sourceTree = "<group>"; };
+		AEC80BA217886FC0000C04D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EPPZViewController_iPhone.xib; sourceTree = "<group>"; };
+		AEC80BA517886FC0000C04D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EPPZViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEC80B8017886FC0000C04D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC80B8717886FC0000C04D8 /* UIKit.framework in Frameworks */,
+				AEC80B8917886FC0000C04D8 /* Foundation.framework in Frameworks */,
+				AEC80B8B17886FC0000C04D8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEC80B7A17886FC0000C04D8 = {
+			isa = PBXGroup;
+			children = (
+				AEC80B8C17886FC0000C04D8 /* eppz!coreData */,
+				AEC80B8517886FC0000C04D8 /* Frameworks */,
+				AEC80B8417886FC0000C04D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEC80B8417886FC0000C04D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80B8317886FC0000C04D8 /* eppz!coreData.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEC80B8517886FC0000C04D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80B8617886FC0000C04D8 /* UIKit.framework */,
+				AEC80B8817886FC0000C04D8 /* Foundation.framework */,
+				AEC80B8A17886FC0000C04D8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEC80B8C17886FC0000C04D8 /* eppz!coreData */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80B9517886FC0000C04D8 /* EPPZAppDelegate.h */,
+				AEC80B9617886FC0000C04D8 /* EPPZAppDelegate.m */,
+				AEC80B9E17886FC0000C04D8 /* EPPZViewController.h */,
+				AEC80B9F17886FC0000C04D8 /* EPPZViewController.m */,
+				AEC80BA117886FC0000C04D8 /* EPPZViewController_iPhone.xib */,
+				AEC80BA417886FC0000C04D8 /* EPPZViewController_iPad.xib */,
+				AEC80B8D17886FC0000C04D8 /* Supporting Files */,
+			);
+			path = "eppz!coreData";
+			sourceTree = "<group>";
+		};
+		AEC80B8D17886FC0000C04D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEC80B8E17886FC0000C04D8 /* eppz!coreData-Info.plist */,
+				AEC80B8F17886FC0000C04D8 /* InfoPlist.strings */,
+				AEC80B9217886FC0000C04D8 /* main.m */,
+				AEC80B9417886FC0000C04D8 /* eppz!coreData-Prefix.pch */,
+				AEC80B9817886FC0000C04D8 /* Default.png */,
+				AEC80B9A17886FC0000C04D8 /* Default@2x.png */,
+				AEC80B9C17886FC0000C04D8 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEC80B8217886FC0000C04D8 /* eppz!coreData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEC80BA917886FC0000C04D8 /* Build configuration list for PBXNativeTarget "eppz!coreData" */;
+			buildPhases = (
+				AEC80B7F17886FC0000C04D8 /* Sources */,
+				AEC80B8017886FC0000C04D8 /* Frameworks */,
+				AEC80B8117886FC0000C04D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "eppz!coreData";
+			productName = "eppz!coreData";
+			productReference = AEC80B8317886FC0000C04D8 /* eppz!coreData.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEC80B7B17886FC0000C04D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EPPZ;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "eppz!";
+			};
+			buildConfigurationList = AEC80B7E17886FC0000C04D8 /* Build configuration list for PBXProject "eppz!coreData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AEC80B7A17886FC0000C04D8;
+			productRefGroup = AEC80B8417886FC0000C04D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEC80B8217886FC0000C04D8 /* eppz!coreData */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEC80B8117886FC0000C04D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC80B9117886FC0000C04D8 /* InfoPlist.strings in Resources */,
+				AEC80B9917886FC0000C04D8 /* Default.png in Resources */,
+				AEC80B9B17886FC0000C04D8 /* Default@2x.png in Resources */,
+				AEC80B9D17886FC0000C04D8 /* Default-568h@2x.png in Resources */,
+				AEC80BA317886FC0000C04D8 /* EPPZViewController_iPhone.xib in Resources */,
+				AEC80BA617886FC0000C04D8 /* EPPZViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEC80B7F17886FC0000C04D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC80B9317886FC0000C04D8 /* main.m in Sources */,
+				AEC80B9717886FC0000C04D8 /* EPPZAppDelegate.m in Sources */,
+				AEC80BA017886FC0000C04D8 /* EPPZViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AEC80B8F17886FC0000C04D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEC80B9017886FC0000C04D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AEC80BA117886FC0000C04D8 /* EPPZViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEC80BA217886FC0000C04D8 /* en */,
+			);
+			name = EPPZViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		AEC80BA417886FC0000C04D8 /* EPPZViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEC80BA517886FC0000C04D8 /* en */,
+			);
+			name = EPPZViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEC80BA717886FC0000C04D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEC80BA817886FC0000C04D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEC80BAA17886FC0000C04D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eppz!coreData/eppz!coreData-Prefix.pch";
+				INFOPLIST_FILE = "eppz!coreData/eppz!coreData-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AEC80BAB17886FC0000C04D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eppz!coreData/eppz!coreData-Prefix.pch";
+				INFOPLIST_FILE = "eppz!coreData/eppz!coreData-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEC80B7E17886FC0000C04D8 /* Build configuration list for PBXProject "eppz!coreData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC80BA717886FC0000C04D8 /* Debug */,
+				AEC80BA817886FC0000C04D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEC80BA917886FC0000C04D8 /* Build configuration list for PBXNativeTarget "eppz!coreData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC80BAA17886FC0000C04D8 /* Debug */,
+				AEC80BAB17886FC0000C04D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEC80B7B17886FC0000C04D8 /* Project object */;
+}
