@@ -21,12 +21,17 @@
     
     //Date.
     NSDateFormatter *dateFormatter = [NSDateFormatter new]; //Format.
-    dateFormatter.dateStyle = NSDateFormatterFullStyle;
-    NSString *dateDisplayString = [dateFormatter stringFromDate:timeStamp.timeStamp];
-    self.timeStampLabel.text = dateDisplayString; //Display.
+    dateFormatter.dateFormat = @"mm:ss";
+    NSString *timeDisplayString = [dateFormatter stringFromDate:timeStamp.timeStamp];
+    self.timeStampLabel.text = timeDisplayString; //Display.
     
     //Notes.
     self.notesLabel.text = timeStamp.notes;
+    
+    //Date.
+    dateFormatter.dateStyle = NSDateFormatterFullStyle;
+    NSString *dateDisplayString = [dateFormatter stringFromDate:timeStamp.timeStamp];
+    self.dateStampLabel.text = dateDisplayString; //Display.
 }
 
 @end

@@ -42,7 +42,6 @@
     return notes[randomIndex];
 }
 
-
 #pragma mark - Implement <NSCoding>
 
 -(id)initWithCoder:(NSCoder*) decoder

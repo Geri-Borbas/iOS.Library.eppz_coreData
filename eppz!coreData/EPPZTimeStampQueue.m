@@ -10,4 +10,8 @@
 
 @implementation EPPZTimeStampQueue
 
+
+-(EPPZTimeStamp*)firstTimeStamp { return (EPPZTimeStamp*)self.firstObject; }
+
+
 @end

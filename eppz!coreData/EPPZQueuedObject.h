@@ -23,4 +23,5 @@ static NSString *const EPPZQueuedObjectSortingKey = @"creationDate";
 //Spare .xcdatamodeld file here.
 +(NSEntityDescription*)entityDescription;
 
+
 @end

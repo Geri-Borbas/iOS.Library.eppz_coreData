@@ -24,6 +24,9 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
 @property (nonatomic, strong) NSString *name;
 +(NSString*)name;
 
+//Index.
+@property (nonatomic, strong) NSMutableDictionary *queuedObjectsForObjects;
+
 @end
 
 
@@ -41,11 +44,7 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
         
         self.name = [[self class] name];
         
-        //Model (from file).
-        //NSURL *modelURL = [[NSBundle mainBundle] URLForResource:EPPZCoreDataObjectQueueDataModelFileName withExtension:EPPZCoreDataObjectQueueDataModelFileExtension];
-        //_managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-        
-        //Model (created at runtime).
+        //Model (describe the objects).
         _managedObjectModel = [NSManagedObjectModel new];
         [_managedObjectModel setEntities:@[[EPPZQueuedObject entityDescription]]];
         
@@ -75,6 +74,10 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
 -(void)fetchQueueOnInit
 {
     LOG_METHOD;
+
+    //Collections.
+    _queue = [NSMutableArray new];
+    _queuedObjectsForObjects = [NSMutableDictionary new];
     
     //Entity.
     NSEntityDescription *entity = [NSEntityDescription entityForName:EPPZQueuedObjectEntityName inManagedObjectContext:self.managedObjectContext];
@@ -93,12 +96,44 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
     [self checkForError:error];
     
     //Unarchive objects.
-    _queue = [NSMutableArray new];
     for (EPPZQueuedObject *eachQueuedObject in queuedObjects)
     {
+        //Unarchive stored object.
         id eachUnarchivedObject = [NSKeyedUnarchiver unarchiveObjectWithData:eachQueuedObject.archivedObject];
+        
+        //Collect.
         [self.queue addObject:eachUnarchivedObject];
+        
+        //Index.
+        [self indexQueuedObject:eachQueuedObject onObject:eachUnarchivedObject];
     }
+}
+
+
+#pragma mark - Indexing
+
+-(void)indexQueuedObject:(EPPZQueuedObject*) queuedObject onObject:(NSObject<NSCoding>*) object
+{
+    if (queuedObject != nil)
+        if (object != nil)
+            if (self.queuedObjectsForObjects != nil)
+            {
+                NSString *key = @(object.hash).stringValue;
+                [self.queuedObjectsForObjects setObject:queuedObject forKey:key];
+            }
+}
+
+-(EPPZQueuedObject*)queuedObjectForObject:(NSObject<NSCoding>*) object
+{
+    if (self.queuedObjectsForObjects != nil)
+    {
+        NSString *key = @(object.hash).stringValue;
+        if ([[self.queuedObjectsForObjects allKeys] containsObject:key])
+        {
+            return [self.queuedObjectsForObjects objectForKey:key];
+        }
+    }
+    return nil;
 }
 
 
@@ -123,11 +158,8 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
 -(NSUInteger)count
 { return self.queue.count; }
 
--(id)objectAtIndexedSubscript:(NSUInteger) index
-{ return [self objectAtIndex:index]; }
-
--(void)setObject:(id) object atIndexedSubscript:(NSUInteger) index
-{ /* Read only */ }
+-(NSUInteger)lastIndex
+{ return self.count - 1; }
 
 -(id)objectAtIndex:(NSUInteger) index
 {
@@ -137,21 +169,35 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
     return nil;
 }
 
--(void)pushNewObject:(id<NSCoding>) object
+-(void)pushNewObject:(NSObject<NSCoding>*) object
 {
     LOG_METHOD;    
-    
-    //Archive object.
-    NSData *archivedObject = [NSKeyedArchiver archivedDataWithRootObject:object];
-    
-    //Add to queue.
-    [self.queue addObject:object];
-    
-    //Add new entry to CoreData context then configure.
-    EPPZQueuedObject *queuedObject = [NSEntityDescription insertNewObjectForEntityForName:EPPZQueuedObjectEntityName
-                                                                   inManagedObjectContext:self.managedObjectContext];
-    queuedObject.creationDate = [NSDate date];
-    queuedObject.archivedObject = archivedObject;
+ 
+    if (object != nil)
+    {
+        //Archive object.
+        NSData *archivedObject = [NSKeyedArchiver archivedDataWithRootObject:object];
+        
+        //Collect.
+        [self.queue addObject:object];
+        
+        //Add new entry to CoreData context then configure.
+        EPPZQueuedObject *queuedObject = [NSEntityDescription insertNewObjectForEntityForName:EPPZQueuedObjectEntityName
+                                                                       inManagedObjectContext:self.managedObjectContext];
+        queuedObject.creationDate = [NSDate date];
+        queuedObject.archivedObject = archivedObject;
+        
+        //Index.
+        [self indexQueuedObject:queuedObject onObject:object];   
+    }
+}
+
+-(NSObject<NSCoding>*)firstObject
+{
+    if (self.queue != nil)
+        if (self.queue.count > 0)
+            return self.queue[0];
+    return nil;
 }
 
 -(void)popFirstObject
@@ -161,13 +207,22 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
             [self popObject:self.queue[0]];
 }
 
--(void)popObject:(id<NSCoding>) object
+-(void)popObject:(NSObject<NSCoding>*) object
 {
     LOG_METHOD;    
     
-    //Remove from queue.
-    
-    //Remove from context.   
+    if (object != nil)
+    {
+        //Seek and destroy corresponding queuedObject.
+        EPPZQueuedObject *queuedObject = [self queuedObjectForObject:object];
+        [self.managedObjectContext deleteObject:queuedObject];
+        
+        //Uncollect.
+        [self.queue removeObject:object];
+        
+        //Save.
+        [self save];
+    }
 }
 
 

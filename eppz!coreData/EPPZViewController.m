@@ -28,13 +28,20 @@
     [self.timeStampQueue pushNewObject:object];
     
     //UI.
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.queueTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
-    [self.queueTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [self addRow];
 }
 
 -(IBAction)pop
-{ [self.timeStampQueue popFirstObject]; }
+{
+    if (self.timeStampQueue.count > 0)
+    {
+        //Model.
+        [self.timeStampQueue popFirstObject];
+    
+        //UI.
+        [self removeTopRow];
+    }
+}
 
 -(IBAction)save
 { [self.timeStampQueue save]; }
@@ -53,12 +60,31 @@
 
 -(UITableViewCell*)tableView:(UITableView*) tableView cellForRowAtIndexPath:(NSIndexPath*) indexPath
 {
-    //Delightful using EPPZTableViewCell.
+    //Delightful using of EPPZTableViewCell.
     //More on http://eppz.eu/blog/custom-uitableview-cell
     return [EPPZTimeStampCell cellForTableView:tableView
                                    atIndexPath:indexPath
                                withModelSource:self];
 }
+
+
+#pragma mark - Table manipulation
+
+-(void)addRow
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.timeStampQueue.lastIndex inSection:0];
+    [self.queueTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
+    [self.queueTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+}
+
+-(void)removeTopRow
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.queueTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
+    if (self.timeStampQueue.count > 0)
+        [self.queueTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+}
+
 
 
 @end

@@ -8,12 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class EPPZViewController;
 
 @interface EPPZAppDelegate : UIResponder <UIApplicationDelegate>
-
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) EPPZViewController *viewController;
-
 @end

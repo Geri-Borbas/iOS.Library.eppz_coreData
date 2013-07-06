@@ -18,6 +18,7 @@
 @interface EPPZTimeStampCell : EPPZTableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *timeStampLabel;
+@property (nonatomic, weak) IBOutlet UILabel *dateStampLabel;
 @property (nonatomic, weak) IBOutlet UILabel *notesLabel;
 
 @end

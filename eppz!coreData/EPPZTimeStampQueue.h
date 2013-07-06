@@ -12,4 +12,9 @@
 
 @interface EPPZTimeStampQueue : EPPZCoreDataObjectQueue
 
+
+//Casting sugar.
+-(EPPZTimeStamp*)firstTimeStamp;
+
+
 @end

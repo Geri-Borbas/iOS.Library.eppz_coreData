@@ -117,10 +117,10 @@
 		AEC80B8C17886FC0000C04D8 /* eppz!coreData */ = {
 			isa = PBXGroup;
 			children = (
-				AEC80C14178878C9000C04D8 /* Core data store */,
-				AEC80C1817887BBD000C04D8 /* TimeStampQueue */,
 				AEC80B9517886FC0000C04D8 /* EPPZAppDelegate.h */,
 				AEC80B9617886FC0000C04D8 /* EPPZAppDelegate.m */,
+				AEC80C14178878C9000C04D8 /* Core data store */,
+				AEC80C1817887BBD000C04D8 /* TimeStampQueue */,
 				AEC80C3B1788A15B000C04D8 /* Views */,
 				AEC80B8D17886FC0000C04D8 /* Supporting Files */,
 			);

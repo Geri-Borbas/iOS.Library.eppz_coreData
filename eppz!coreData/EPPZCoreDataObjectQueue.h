@@ -19,11 +19,13 @@
 
 @property (nonatomic, strong, readonly) NSMutableArray *queue;
 @property (nonatomic, readonly) NSUInteger count;
+@property (nonatomic, readonly) NSUInteger lastIndex;
 
--(void)pushNewObject:(id<NSCoding>) object;
+-(void)pushNewObject:(NSObject<NSCoding>*) object;
+-(NSObject<NSCoding>*)firstObject;
 -(void)popFirstObject;
--(void)popObject:(id<NSCoding>) object;
--(id<NSCoding>)objectAtIndex:(NSUInteger) index;
+-(void)popObject:(NSObject<NSCoding>*) object;
+-(NSObject<NSCoding>*)objectAtIndex:(NSUInteger) index;
 
 -(void)applicationWillTerminate:(UIApplication*) application;
 -(void)save;
