@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
+static NSString *const EPPZQueuedObjectEntityName = @"EPPZQueuedObject";
 static NSString *const EPPZQueuedObjectSortingKey = @"creationDate";
 
 
@@ -19,5 +20,7 @@ static NSString *const EPPZQueuedObjectSortingKey = @"creationDate";
 @property (nonatomic, strong) NSDate *creationDate;
 @property (nonatomic, strong) NSData *archivedObject;
 
+//Spare .xcdatamodeld file here.
++(NSEntityDescription*)entityDescription;
 
 @end

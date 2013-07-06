@@ -12,7 +12,6 @@
 
 static NSString *const EPPZCoreDataObjectQueueDataModelFileName = @"EPPZCoreDataObjectQueue";
 static NSString *const EPPZCoreDataObjectQueueDataModelFileExtension = @"momd";
-static NSString *const EPPZCoreDataQueuedObjectEntityName = @"EPPZQueuedObject";
 static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
 
 
@@ -42,9 +41,13 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
         
         self.name = [[self class] name];
         
-        //Model (description of entities within).
-        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:EPPZCoreDataObjectQueueDataModelFileName withExtension:EPPZCoreDataObjectQueueDataModelFileExtension];
-        _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+        //Model (from file).
+        //NSURL *modelURL = [[NSBundle mainBundle] URLForResource:EPPZCoreDataObjectQueueDataModelFileName withExtension:EPPZCoreDataObjectQueueDataModelFileExtension];
+        //_managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+        
+        //Model (created at runtime).
+        _managedObjectModel = [NSManagedObjectModel new];
+        [_managedObjectModel setEntities:@[[EPPZQueuedObject entityDescription]]];
         
         //Coordinator (connects the objects with the SQLite store).
         _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
@@ -74,7 +77,7 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
     LOG_METHOD;
     
     //Entity.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:EPPZCoreDataQueuedObjectEntityName inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:EPPZQueuedObjectEntityName inManagedObjectContext:self.managedObjectContext];
   
     //Sort.
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:EPPZQueuedObjectSortingKey ascending:NO];
@@ -145,7 +148,7 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
     [self.queue addObject:object];
     
     //Add new entry to CoreData context then configure.
-    EPPZQueuedObject *queuedObject = [NSEntityDescription insertNewObjectForEntityForName:EPPZCoreDataQueuedObjectEntityName
+    EPPZQueuedObject *queuedObject = [NSEntityDescription insertNewObjectForEntityForName:EPPZQueuedObjectEntityName
                                                                    inManagedObjectContext:self.managedObjectContext];
     queuedObject.creationDate = [NSDate date];
     queuedObject.archivedObject = archivedObject;

@@ -20,7 +20,6 @@
 		AEC80BA317886FC0000C04D8 /* EPPZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC80BA117886FC0000C04D8 /* EPPZViewController.xib */; };
 		AEC80BAE17886FD6000C04D8 /* EPPZCoreDataObjectQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80BAD17886FD6000C04D8 /* EPPZCoreDataObjectQueue.m */; };
 		AEC80BB0178870AC000C04D8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC80BAF178870AC000C04D8 /* CoreData.framework */; };
-		AEC80C1717887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEC80C1517887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodeld */; };
 		AEC80C1B17887BD8000C04D8 /* EPPZTimeStampQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80C1A17887BD8000C04D8 /* EPPZTimeStampQueue.m */; };
 		AEC80C25178888CF000C04D8 /* EPPZQueuedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80C24178888CF000C04D8 /* EPPZQueuedObject.m */; };
 		AEC80C2F17889669000C04D8 /* EPPZTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC80C2E17889669000C04D8 /* EPPZTimeStamp.m */; };
@@ -54,7 +53,6 @@
 		AEC80BAC17886FD6000C04D8 /* EPPZCoreDataObjectQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZCoreDataObjectQueue.h; sourceTree = "<group>"; };
 		AEC80BAD17886FD6000C04D8 /* EPPZCoreDataObjectQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZCoreDataObjectQueue.m; sourceTree = "<group>"; };
 		AEC80BAF178870AC000C04D8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		AEC80C1617887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EPPZCoreDataObjectQueue.xcdatamodel; sourceTree = "<group>"; };
 		AEC80C1917887BD8000C04D8 /* EPPZTimeStampQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZTimeStampQueue.h; sourceTree = "<group>"; };
 		AEC80C1A17887BD8000C04D8 /* EPPZTimeStampQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZTimeStampQueue.m; sourceTree = "<group>"; };
 		AEC80C23178888CF000C04D8 /* EPPZQueuedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZQueuedObject.h; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 				AEC80BAF178870AC000C04D8 /* CoreData.framework */,
 				AEC80BAC17886FD6000C04D8 /* EPPZCoreDataObjectQueue.h */,
 				AEC80BAD17886FD6000C04D8 /* EPPZCoreDataObjectQueue.m */,
-				AEC80C1517887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodeld */,
 				AEC80C26178888D3000C04D8 /* QueuedObject */,
 			);
 			name = "Core data store";
@@ -304,7 +301,6 @@
 				AEC80B9717886FC0000C04D8 /* EPPZAppDelegate.m in Sources */,
 				AEC80BA017886FC0000C04D8 /* EPPZViewController.m in Sources */,
 				AEC80BAE17886FD6000C04D8 /* EPPZCoreDataObjectQueue.m in Sources */,
-				AEC80C1717887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodeld in Sources */,
 				AEC80C1B17887BD8000C04D8 /* EPPZTimeStampQueue.m in Sources */,
 				AEC80C25178888CF000C04D8 /* EPPZQueuedObject.m in Sources */,
 				AEC80C2F17889669000C04D8 /* EPPZTimeStamp.m in Sources */,
@@ -437,19 +433,6 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AEC80C1517887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AEC80C1617887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodel */,
-			);
-			currentVersion = AEC80C1617887A5F000C04D8 /* EPPZCoreDataObjectQueue.xcdatamodel */;
-			path = EPPZCoreDataObjectQueue.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AEC80B7B17886FC0000C04D8 /* Project object */;
 }
