@@ -1,4 +1,4 @@
-## ![eppz!tools](http://www.eppz.eu/beacons/eppz.png) eppz!coreData
+## ![eppz!tools](http://www.eppz.eu/beacons/eppz!.png) eppz!coreData
 Soon. Until than see [blog post](http://eppz.eu/blog/simple-core-data-sample-code/) growing.
 
 #### License
