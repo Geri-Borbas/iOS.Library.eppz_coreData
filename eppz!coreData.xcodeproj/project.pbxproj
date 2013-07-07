@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE18B3F817898E7F00EE0B66 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AE18B3F717898E7F00EE0B66 /* README.md */; };
 		AEC80B8717886FC0000C04D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC80B8617886FC0000C04D8 /* UIKit.framework */; };
 		AEC80B8917886FC0000C04D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC80B8817886FC0000C04D8 /* Foundation.framework */; };
 		AEC80B8B17886FC0000C04D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC80B8A17886FC0000C04D8 /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE18B3F717898E7F00EE0B66 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AEC80B8317886FC0000C04D8 /* eppz!coreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eppz!coreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC80B8617886FC0000C04D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AEC80B8817886FC0000C04D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +132,7 @@
 		AEC80B8D17886FC0000C04D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE18B3F717898E7F00EE0B66 /* README.md */,
 				AEC80C401788A7DF000C04D8 /* icon-72.png */,
 				AEC80C411788A7DF000C04D8 /* icon-72@2x.png */,
 				AEC80C421788A7DF000C04D8 /* icon.png */,
@@ -287,6 +290,7 @@
 				AEC80C451788A7DF000C04D8 /* icon-72@2x.png in Resources */,
 				AEC80C461788A7DF000C04D8 /* icon.png in Resources */,
 				AEC80C471788A7DF000C04D8 /* icon@2x.png in Resources */,
+				AE18B3F817898E7F00EE0B66 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +435,7 @@
 				AEC80BAB17886FC0000C04D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -44,18 +44,18 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
         
         self.name = [[self class] name];
         
-        //Model (describe the objects).
+        //Model (describe the entities).
         _managedObjectModel = [NSManagedObjectModel new];
         [_managedObjectModel setEntities:@[[EPPZQueuedObject entityDescription]]];
         
-        //Coordinator (connects the objects with the SQLite store).
+        //Coordinator (connects the entities with the SQLite store).
         _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
         
-        //Context (where the entity objects live).
+        //Context (where the entities live).
         _managedObjectContext = [[NSManagedObjectContext alloc] init];
         [_managedObjectContext setPersistentStoreCoordinator:self.persistentStoreCoordinator];
         
-        //Add store (SQLite).
+        //Add a store (an SQLite file in Documents directory).
         NSError *error;
         NSURL *documents = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
         NSURL *storeURL = [documents URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", self.name, EPPZCoreDataStoreFileExtension]];

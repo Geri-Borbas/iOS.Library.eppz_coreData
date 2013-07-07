@@ -37,8 +37,15 @@
                        @"Breathtaking bits",
                        @"Shocking information",
                        ];
-    
+
+    //Pick.
+    static int previouslyPickedIndex;
     int randomIndex = arc4random() % notes.count;
+    
+    //Return if pick is not the same as previous.
+    if (randomIndex == previouslyPickedIndex) return [self randomNote];
+    
+    previouslyPickedIndex = randomIndex;
     return notes[randomIndex];
 }
 

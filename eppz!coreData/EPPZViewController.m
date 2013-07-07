@@ -8,9 +8,11 @@
 
 #import "EPPZViewController.h"
 
+
 @interface EPPZViewController ()
 @property (nonatomic, strong) EPPZTimeStampQueue *timeStampQueue;
 @end
+
 
 @implementation EPPZViewController
 
@@ -23,11 +25,8 @@
 
 -(IBAction)push
 {
-    //Model.
-    EPPZTimeStamp *object = [EPPZTimeStamp timeStamp];
-    [self.timeStampQueue pushNewObject:object];
-    
-    //UI.
+    //Manipulate model, update UI.
+    [self.timeStampQueue pushNewObject:[EPPZTimeStamp timeStamp]];
     [self addRow];
 }
 
@@ -35,10 +34,8 @@
 {
     if (self.timeStampQueue.count > 0)
     {
-        //Model.
+        //Manipulate model, update UI.
         [self.timeStampQueue popFirstObject];
-    
-        //UI.
         [self removeTopRow];
     }
 }
@@ -60,8 +57,7 @@
 
 -(UITableViewCell*)tableView:(UITableView*) tableView cellForRowAtIndexPath:(NSIndexPath*) indexPath
 {
-    //Delightful using of EPPZTableViewCell.
-    //More on http://eppz.eu/blog/custom-uitableview-cell
+    //Delightful using of EPPZTableViewCell http://eppz.eu/blog/custom-uitableview-cell
     return [EPPZTimeStampCell cellForTableView:tableView
                                    atIndexPath:indexPath
                                withModelSource:self];
@@ -73,14 +69,14 @@
 -(void)addRow
 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.timeStampQueue.lastIndex inSection:0];
-    [self.queueTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
+    [self.queueTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
     [self.queueTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 -(void)removeTopRow
 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.queueTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
+    [self.queueTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
     if (self.timeStampQueue.count > 0)
         [self.queueTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
