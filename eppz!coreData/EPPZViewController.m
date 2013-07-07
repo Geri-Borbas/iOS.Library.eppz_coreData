@@ -1,9 +1,13 @@
 //
 //  EPPZViewController.m
-//  eppz!coreData
+//  eppz!tools
 //
-//  Created by Gardrobe on 7/6/13.
-//  Copyright (c) 2013 eppz!. All rights reserved.
+//  Created by Borbás Geri on 7/7/13.
+//  Copyright (c) 2013 eppz! development, LLC.
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+//  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
 #import "EPPZViewController.h"
@@ -20,14 +24,16 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Create queue (loads the stored timeStamps on creation).
     self.timeStampQueue = [EPPZTimeStampQueue new];
 }
 
 -(IBAction)push
 {
-    //Manipulate model, update UI.
+    //Push a brand new timeStamp, update UI.
     [self.timeStampQueue pushNewObject:[EPPZTimeStamp timeStamp]];
-    [self addRow];
+    [self addTableRow];
 }
 
 -(IBAction)pop
@@ -36,7 +42,7 @@
     {
         //Manipulate model, update UI.
         [self.timeStampQueue popFirstObject];
-        [self removeTopRow];
+        [self removeTopTableRow];
     }
 }
 
@@ -66,14 +72,14 @@
 
 #pragma mark - Table manipulation
 
--(void)addRow
+-(void)addTableRow
 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.timeStampQueue.lastIndex inSection:0];
     [self.queueTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
     [self.queueTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
--(void)removeTopRow
+-(void)removeTopTableRow
 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.queueTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
