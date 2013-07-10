@@ -68,14 +68,11 @@ static NSString *const EPPZCoreDataStoreFileExtension = @"sqlite";
                                                                 URL:storeURL
                                                             options:nil error:&error];
         [self checkForError:error];
-        
-        //Fetch, unarchive queued object from Core Data.
-        [self fetchQueue];
     }
     return self;
 }
 
--(void)fetchQueue
+-(void)load
 {
     LOG_METHOD;
 

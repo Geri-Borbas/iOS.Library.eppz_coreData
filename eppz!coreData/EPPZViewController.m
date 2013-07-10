@@ -25,8 +25,9 @@
 {
     [super viewDidLoad];
     
-    //Create queue (loads the stored timeStamps on creation).
+    //Load queue.
     self.timeStampQueue = [EPPZTimeStampQueue new];
+    [self.timeStampQueue load];
 }
 
 -(IBAction)push

@@ -31,6 +31,7 @@
 -(void)popObject:(NSObject<NSCoding>*) object;
 -(NSObject<NSCoding>*)objectAtIndex:(NSUInteger) index;
 
+-(void)load;
 -(void)save;
 
 @end
