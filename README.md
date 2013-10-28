@@ -5,3 +5,7 @@ Will describe here soon. Until than see [blog post](http://eppz.eu/blog/simple-c
 > Licensed under the [Open Source MIT license](http://en.wikipedia.org/wiki/MIT_License).
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/498e8b376c9c6594cdb00270dfded876 "githalytics.com")](http://githalytics.com/eppz/eppz-coreData)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/eppz/eppz-coredata/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
