@@ -1,5 +1,5 @@
 ## ![eppz!tools](http://www.eppz.eu/beacons/eppz!.png) eppz!coreData
-Will describe here soon. Until than see [blog post](http://eppz.eu/blog/simple-core-data-sample-code/).
+Will describe here soon. Until than see [blog post](http://eppz.eu/blog/simple-core-data-sample/).
 
 #### License
 > Licensed under the [Open Source MIT license](http://en.wikipedia.org/wiki/MIT_License).
